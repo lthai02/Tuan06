@@ -1,4 +1,4 @@
-const Customers = require('../models/Customers');
+const Customer = require('../models/Customers');
 
 const createCustomer = async (data) => {
   return await Customer.create(data);
