@@ -1,9 +1,9 @@
 const rateLimits = require('express-rate-limit');
 
 const rateLimit = rateLimits({
-  windowMs: 15 * 60 * 1000, // 15 phút
-  max: 100, // Tối đa 100 request mỗi IP
-  message: '🚫 Quá nhiều yêu cầu từ IP này, hãy thử lại sau 15 phút.',
+  windowMs: 1 * 60 * 1000, // 1 phút (60 giây * 1000 mili giây)
+  max: 5,                   // Tối đa 5 request mỗi IP trong 1 phút
+  message: '🚫 Quá nhiều yêu cầu từ IP này, hãy thử lại sau 1 phút.',
   standardHeaders: true,
   legacyHeaders: false,
 });
